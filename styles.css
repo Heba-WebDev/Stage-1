@@ -1,0 +1,391 @@
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-weight: 400;
+	overflow-wrap: break-word;
+}
+
+p {
+	hyphens: auto;
+}
+
+img,
+picture,
+video,
+svg,
+canvas {
+	max-width: 100%;
+	display: block;
+}
+
+/* ------------------- */
+/* Login Button        */
+/* ------------------- */
+.have_account {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.have_account p {
+	font-weight: 500;
+	font-size: 1.2rem;
+	margin-right: 0.5rem;
+}
+
+/* ------------------- */
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/*
+		Select has default styles in Safari and Firechrome
+        I'm overriding these styles
+	*/
+select {
+	appearance: none;
+	line-height: normal;
+	position: relative;
+	background-position: right 10px top 50%;
+	background-repeat: no-repeat;
+	background-size: 10px;
+	background-color: white;
+	background-image: url(/Images/General/down-arrow-backup-2-svgrepo-com.svg);
+}
+
+html,
+body,
+#__next {
+	height: 100%;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ------------------- */
+/* Root variables      */
+/* ------------------- */
+
+:root {
+	/* colors */
+	--clr-primary: 136 65% 51%;
+	--clr-neutral: 30, 87%, 97%;
+	--clr-white: 0 0% 100%;
+	--clr-secondary: 233 27% 24%;
+	--clr-light-gray: 214 32% 91%;
+
+	/* font-sizes */
+	--fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+	--fs-800: 3.5rem;
+	--fs-700: 1.5rem;
+	--fs-600: 1rem;
+	--fs-500: 1rem;
+	--fs-400: 0.9375rem;
+	--fs-300: 1rem;
+	--fs-200: 0.875rem;
+
+	/* font-families */
+	--ff-sans-cond: 'Barlow Condensed', sans-serif;
+	--ff-sans-normal: 'Barlow', sans-serif;
+}
+
+@media (min-width: 35em) {
+	:root {
+		--fs-800: 5rem;
+		--fs-700: 2.5rem;
+		--fs-600: 1.5rem;
+		--fs-500: 1.25rem;
+		--fs-400: 1rem;
+	}
+}
+
+@media (min-width: 45em) {
+	:root {
+		/* font-sizes */
+		--fs-800: 6.25rem;
+		--fs-700: 3.5rem;
+		--fs-600: 2rem;
+		--fs-500: 1.75rem;
+		--fs-400: 1.125rem;
+	}
+}
+
+/* ------------------- */
+/* Typography          */
+/* ------------------- */
+
+.fs-900 {
+	font-size: var(--fs-900);
+}
+
+.fs-800 {
+	font-size: var(--fs-800);
+}
+
+.fs-700 {
+	font-size: var(--fs-700);
+}
+
+.fs-600 {
+	font-size: var(--fs-600);
+}
+
+.fs-500 {
+	font-size: var(--fs-500);
+}
+
+.fs-400 {
+	font-size: var(--fs-400);
+}
+
+.fs-300 {
+	font-size: var(--fs-300);
+}
+
+.fs-200 {
+	font-size: var(--fs-200);
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+	line-height: 1.1;
+}
+
+.letter-spacing-1 {
+	letter-spacing: 4.75px;
+}
+
+.letter-spacing-2 {
+	letter-spacing: 2.7px;
+}
+
+.letter-spacing-3 {
+	letter-spacing: 2.35px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+/* ------------------- */
+/* Colors              */
+/* ------------------- */
+
+/* Background colors */
+
+.bg-primary {
+	background-color: hsl(var(--clr-primary));
+}
+
+.bg-dark {
+	background-color: hsl(var(--clr-secondary));
+}
+
+.bg-neutral {
+	background-color: hsl(var(--clr-neutral));
+}
+
+.bg-light-gray {
+	background-color: hsl(var(--clr-light-gray));
+}
+
+.bg-gradient {
+	background: hsl(136, 56, 51);
+	background: linear-gradient(70deg, rgb(49, 211, 92) 10%, rgb(43, 183, 218));
+}
+
+/* Font colors */
+
+.text-primary {
+	color: hsl(var(--clr-primary));
+}
+
+.text-dark {
+	color: hsl(var(--clr-secondary));
+}
+
+.text-gray {
+	color: hsl(var(--clr-light-gray));
+}
+
+.text-white {
+	color: hsl(var(--clr-white));
+}
+
+/* Border colors */
+
+.border-gray {
+	border: 1px solid hsl(var(--clr-light-gray));
+}
+
+/* ------------------- */
+/* Utility Classes     */
+/* ------------------- */
+
+.flex {
+	display: flex;
+	gap: var(--gap, 1rem);
+}
+
+.grid {
+	display: grid;
+	gap: var(--gap, 1rem);
+}
+
+.d-block {
+	display: block;
+}
+
+.container {
+	padding-inline: 1em;
+	margin-inline: auto;
+	max-width: 80rem;
+}
+
+@media (min-width: 720px) {
+	.container {
+		padding-inline: 2em;
+	}
+}
+
+/* ------------------- */
+/* Body                */
+/* ------------------- */
+
+body {
+   display: flex;
+   flex-direction: column;
+   gap: 4rem;
+    padding-block: 1rem;
+    font-size: var(--fs-400);
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: var(--fs-400);
+}
+
+.title {
+    text-align: center;
+}
+
+.info {
+    display: grid;
+    gap: 1rem;
+    padding-block: 2rem;
+}
+
+.slack__name {
+    background-color: hsl(252, 66%, 62%);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.slack__name--h2,
+.slack__day--h2,
+.slack__picture--h2,
+.slack__time--h2,
+.slack__track--h2,
+.slack__github--h2 {
+    font-size: 1.3rem;
+	text-decoration: underline;
+}
+
+.slack__name--h3,
+.slack__day--h3,
+.slack__picture--h3,
+.slack__time--h3,
+.slack__track--h3,
+.slack__github--h3,
+.github {
+    font-size: 1.8rem;
+}
+
+.slack__picture {
+    background-color: hsl(312, 45%, 23%);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.slack__picture > img {
+
+    border-radius: 999px;
+    width: 80px;
+}
+
+.slack__day {
+    background-color: hsl(28, 88%, 67%);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.slack__time {
+	background-color: hsl(359, 78%, 78%);
+	padding: 1rem;
+    border-radius: 10px;
+}
+
+.slack__track {
+	background-color: hsl(173, 45%, 57%);
+	padding: 1rem;
+    border-radius: 10px;
+}
+
+.slack__github {
+	background-color: hsl(44, 81%, 69%);
+	padding: 1rem;
+	border-radius: 10px;
+}

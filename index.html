@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Stage 1 - Frontend</title>
+</head>
+<body class="container bg-neutral">
+    <nav>
+    <a href="/">
+        <span class="text-primary">&lt;</span>
+        <span class="logo"> Heba </span>
+        <span class="text-primary">/ &gt;</span>
+    </a>
+    </nav>
+    <main>
+        <h1 class="title">My name is Heba Omar, and I'm a Frontend Web Developer 👋 </h1>
+        <section class="info">
+            <div class="slack__name text-white">
+                <h2 class="slack__name--h2">Slack Name</h2>
+                <h3 class="slack__name--h3" data-testid="slackUserName">Heba Ismael Omar</h3>
+            </div>
+            <div class="slack__picture text-white">
+                <h2 class="slack__picture--h2">Slack Picture</h2>
+                <img src="VTuimCE1_400x400.jpg" alt="hebanano12" data-testid="slackDisplayImage" />
+            </div>
+            <div class="slack__day text-white">
+                <h2 class="slack__day--h2">Day Of The Week</h2>
+                <h3 class="slack__day--h3" id="dayOfWeek" data-testid="currentDayOfTheWeek"></h3>
+            </div>
+            <div class="slack__time text-white">
+                <h2 class="slack__time--h2" >Current UTC Time</h2>
+                <h3 class="slack__time--h3" data-testid="currentUTCTime" id="currentUTCTime"></h3>
+            </div>
+            <div class="slack__track text-white">
+                <h2 class="slack__track--h2">Track</h2>
+                <h3 class="slack__track--h3" data-testid="myTrack">Frontend</h3>
+             </div>
+            <div class="slack__github text-white">
+                <h2 class="slack__track--h2">Github</h2>
+                <a href="https://github.com/Heba-WebDev/Stage-1"  data-testid=“githubURL” target="_blank" class="github">Stage-1 Repository</a>
+            </div>
+        </section>
+    </main>
+    <script src="/sandbox.js"></script>
+</body>
+</html>
